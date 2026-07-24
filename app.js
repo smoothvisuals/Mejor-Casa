@@ -5,9 +5,11 @@
   const CUSTOMER_KEY = "bw_customer_v1";
 
   let catalog = [];
+  let categories = [];
   let cart = loadCart();
   let currentSearch = "";
   let currentSort = "default";
+  let currentCategory = "Todos";
 
   const app = document.getElementById("app");
 
@@ -120,6 +122,14 @@
             <option value="price-asc" ${currentSort === "price-asc" ? "selected" : ""}>Precio ↑</option>
             <option value="price-desc" ${currentSort === "price-desc" ? "selected" : ""}>Precio ↓</option>
           </select>
+        </div>
+        <div class="category-row" id="categoryRow">
+          ${["Todos", ...categories]
+            .map(
+              (c) =>
+                `<button class="cat-chip ${c === currentCategory ? "active" : ""}" data-cat="${escapeAttr(c)}">${escapeHtml(c)}</button>`
+            )
+            .join("")}
         </div>`;
     }
     html += `</header>`;
@@ -186,6 +196,9 @@
 
   function getFilteredSorted() {
     let items = catalog;
+    if (currentCategory !== "Todos") {
+      items = items.filter((p) => p.category === currentCategory);
+    }
     if (currentSearch.trim()) {
       const q = normalize(currentSearch);
       items = items.filter((p) => normalize(p.name).includes(q) || p.id.includes(q));
@@ -226,6 +239,12 @@
     document.getElementById("sortSelect").addEventListener("change", (e) => {
       currentSort = e.target.value;
       document.getElementById("grid").innerHTML = getFilteredSorted().map(productCardHtml).join("");
+    });
+    document.getElementById("categoryRow").addEventListener("click", (e) => {
+      const chip = e.target.closest(".cat-chip");
+      if (!chip) return;
+      currentCategory = chip.dataset.cat;
+      renderHome();
     });
   }
 
@@ -542,6 +561,11 @@
     .then((r) => r.json())
     .then((data) => {
       catalog = data;
+      const counts = {};
+      catalog.forEach((p) => {
+        if (p.category) counts[p.category] = (counts[p.category] || 0) + 1;
+      });
+      categories = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
       router();
     })
     .catch(() => {

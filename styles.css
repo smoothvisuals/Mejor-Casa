@@ -73,9 +73,10 @@ a { color: inherit; }
 }
 
 .app-header h1 {
-  font-size: 18px;
+  font-size: 24px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.01em;
   flex: 1;
 }
 
@@ -101,6 +102,36 @@ a { color: inherit; }
   font-size: 14px;
   background: white;
   color: var(--text);
+}
+
+.category-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-top: 10px;
+  padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.category-row::-webkit-scrollbar { display: none; }
+
+.cat-chip {
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.18);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 20px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cat-chip.active {
+  background: white;
+  color: var(--teal-dark);
+  border-color: white;
 }
 
 /* ---------- Product grid ---------- */

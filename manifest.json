@@ -1,6 +1,6 @@
 {
-  "name": "Catálogo Betterware",
-  "short_name": "Catálogo",
+  "name": "Mejor Casa",
+  "short_name": "Mejor Casa",
   "description": "Catálogo de productos para pedidos",
   "start_url": "./index.html",
   "scope": "./",
