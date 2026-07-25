@@ -81,15 +81,6 @@
     "category": "Limpieza"
   },
   {
-    "id": "16108",
-    "name": "Repuesto",
-    "price": 59,
-    "comboPrice": null,
-    "page": 8,
-    "image": "images/p008_1.jpg",
-    "category": "Otros"
-  },
-  {
     "id": "26793",
     "name": "Repisa Oslo",
     "price": 700,
