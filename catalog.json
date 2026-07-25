@@ -306,18 +306,18 @@
     "category": "Tecnología e Iluminación"
   },
   {
-    "id": "26996",
-    "name": "Mosquitero Ventana",
-    "price": 299,
+    "id": "25331",
+    "name": "Mosquitero Pop",
+    "price": 499,
     "comboPrice": null,
     "page": 22,
     "image": "images/p022_0.jpg",
     "category": "Tecnología e Iluminación"
   },
   {
-    "id": "25331",
-    "name": "Mosquitero Pop",
-    "price": 499,
+    "id": "26996",
+    "name": "Mosquitero Ventana Black",
+    "price": 299,
     "comboPrice": null,
     "page": 22,
     "image": "images/p022_1.jpg",
@@ -1791,18 +1791,18 @@
     "category": "Cocina"
   },
   {
-    "id": "26054",
-    "name": "Gurmy Toy Story Lonchera Toy Story",
-    "price": 249,
+    "id": "26778",
+    "name": "Lonchera Toy Story",
+    "price": 399,
     "comboPrice": null,
     "page": 64,
     "image": "images/p064_0.jpg",
     "category": "Bebés y Niños"
   },
   {
-    "id": "26778",
-    "name": "Lonchera Toy Story",
-    "price": 399,
+    "id": "26054",
+    "name": "Gurmy Toy Story",
+    "price": 249,
     "comboPrice": null,
     "page": 64,
     "image": "images/p064_1.jpg",
@@ -1899,19 +1899,19 @@
     "category": "Belleza y Cuidado Personal"
   },
   {
-    "id": "26882",
-    "name": "Barras Pedi Spa Lavanda + Frutal",
-    "price": 199,
-    "comboPrice": null,
+    "id": "24212",
+    "name": "Pedi Spa Smart",
+    "price": 950,
+    "comboPrice": 649,
     "page": 68,
     "image": "images/p068_1.jpg",
     "category": "Belleza y Cuidado Personal"
   },
   {
-    "id": "24212",
-    "name": "Pedi Spa Smart",
-    "price": 950,
-    "comboPrice": 649,
+    "id": "26882",
+    "name": "Barras Pedi Spa Lavanda + Frutal",
+    "price": 199,
+    "comboPrice": null,
     "page": 68,
     "image": "images/p068_2.jpg",
     "category": "Belleza y Cuidado Personal"
