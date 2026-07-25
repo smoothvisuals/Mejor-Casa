@@ -152,7 +152,7 @@ a { color: inherit; }
 }
 
 .product-card .thumb-wrap {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #eee;
 }
